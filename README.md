@@ -1,5 +1,8 @@
 # Coffee_shop-API-backend
 
+<h2>Objetivo</h2>
+<p>Este projeto web tem como objetivo abordar todo conteúdo aprendido com spring boot, incluindo o backend e frontend. </p>
+<h2>Escopo</h2>
 <p>O sistema coffee.io é um sistema de gerenciamento comercial, desenvolvido para uma empresa fictícia.</p> 
 <p>O sistema dispõe de dois níveis de acesso por meio de um login, permite o controle de acesso a páginas e o registro atividade no site. </p> 
 <p>O primeiro nível é para gerentes e administradores, que por sua vez, tem o acesso total ao sistema, efetua as tarefas de controle (cadastro, exclusão, alteração, consulta) de vendas, caixa, compra e estoque. Cabe também a este nível de acesso a inclusão de funcionários e produtos e fornecedores no sistema.</p> 
