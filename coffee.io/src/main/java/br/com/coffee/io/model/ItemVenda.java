@@ -44,4 +44,9 @@ public class ItemVenda implements Serializable{
 	@ManyToOne
     @JoinColumn(name= "fk_venda_id")
     private Venda venda;
+	
+	@ManyToOne
+    @JoinColumn(name= "fk_produto_id")
+    private Produto produto;
+	
 }

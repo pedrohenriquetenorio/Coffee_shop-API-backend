@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -20,28 +22,28 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @EqualsAndHashCode(of = {"id"})
 @Entity
-@Table(name = "fornecedor")
-public class Fornecedor implements Serializable {
-	
+@Table(name = "entrada")
+public class EntradaCaixa implements Serializable {
 	private static final long serialVersionUID = 1L;
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
-	@Column(name = "nome", nullable = false)
-	private Double nome;
+	@Column(name = "valor", nullable = false)
+	private double valor;
 	
-	@Column(name = "cnpj", nullable = false)
-	private Double cnpj;
+	@Column(name = "data", nullable = false)
+	private LocalDateTime data;
 	
-	@Column(name = "data_cadastro", nullable = false)
-    private LocalDateTime dataCadastro;
+	@Column(name = "observacao", nullable = false)
+	private String observacao;
 	
-	@Column(name = "data_atualizacao", nullable = false)
-    private LocalDateTime dataAtualizacao;
+	@ManyToOne
+	@JoinColumn(name = "fk_caixa_id")
+	private Caixa caixa;
 	
-	@Column(name = "status", nullable = false)
-	private Double status;
+	@ManyToOne
+	@JoinColumn(name = "fk_funcionario_id")
+	private Funcionario funcionario;
 	
 }

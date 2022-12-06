@@ -34,4 +34,6 @@ public class Role implements Serializable {
 				joinColumns = @JoinColumn(name = "fk_role_id"),
 			 	inverseJoinColumns = @JoinColumn(name="fk_permission_id"))
 	private List<Permission>listaRoles = new ArrayList<>();
+	
+	
 }

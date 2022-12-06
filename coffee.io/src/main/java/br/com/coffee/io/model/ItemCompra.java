@@ -41,4 +41,10 @@ public class ItemCompra implements Serializable{
 	@ManyToOne
     @JoinColumn(name= "fk_compra_id")
     private Compra compra;
+	
+	@ManyToOne
+    @JoinColumn(name= "fk_ingrediente_id")
+    private Ingrediente ingrediente;
+	
+	
 }

@@ -29,10 +29,10 @@ public class Permission implements Serializable{
 	private int id;
 	
 	@Column(name = "data_cadastro", nullable = false)
-	
     private LocalDateTime dataCadastro;
 	
 	@Column(name = "data_atualizacao", nullable = false)
-	
     private LocalDateTime dataAtualizacao;
+	
+	
 }
